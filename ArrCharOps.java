@@ -48,11 +48,11 @@ public class ArrCharOps {
      */
     public static boolean equals(char[] arr1, char[] arr2) {
         for (int i = 0; i < arr1.length; i++) {
-            if (arr1[i] == arr2[i]) {
-                return true; 
+            if (arr1[i] != arr2[i]) {
+                return false; 
             }
         }
-        return false;
+        return true;
     }
 
     /** Returns the index within the given array of the first occurrence of the given character.
