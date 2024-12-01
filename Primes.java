@@ -20,7 +20,7 @@ public class Primes {
             }
             i++;
         }
-        System.out.println("Prime up to " + n + ":");
+        System.out.println("Prime numbers up to " + n + ":");
         int count = 0;
         i = 2;
         while  (i <= n) {
