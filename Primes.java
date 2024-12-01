@@ -1,7 +1,6 @@
 public class Primes {
     public static void main(String[] args) {
-        int n = 30;
-
+        int n = Integer.parseInt(args[0]);
         boolean [] primes = new boolean[n + 1];
         primes[0] = primes[1] = false;
 
