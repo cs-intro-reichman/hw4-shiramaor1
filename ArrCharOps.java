@@ -95,7 +95,7 @@ public class ArrCharOps {
     */
     public static char[] concat(char[] arr1, char[] arr2) {
         
-        char[] finalConcat = new char[arr1.length + arr2.length -1];
+        char[] finalConcat = new char[arr1.length + arr2.length];
         
         for (int i = 0; i < arr1.length; i++) {
             finalConcat[i] = arr1[i];
@@ -113,13 +113,16 @@ public class ArrCharOps {
      *  characters containing the characters "urge".
      */     
     public static char[] subArray(char[] arr, int beginIndex, int endIndex) {
-        
-        char[] finalSubArray = new char [endIndex - beginIndex + 1];
+        if (beginIndex < 0 || endIndex > arr.length || beginIndex > endIndex) {
+            return null;
+        }
+        char[] finalSubArray = new char [endIndex - beginIndex];
         
         for (int i = beginIndex; i < endIndex; i++) {
             finalSubArray[i - beginIndex] = arr[i];
         }
         return finalSubArray;
+        
     }
 
      /** Returns a single integer that represents the given array. This integer is sometimes 
